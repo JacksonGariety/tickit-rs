@@ -2,10 +2,7 @@
 name = "tickit"
 version = "0.0.0"
 authors = ["Ben Longbons <b.r.longbons@gmail.com>"]
-build = [
-    "./install_tickit.sh",
-    "./generate_link.sh"
-]
+build = "./install_tickit.sh"
 
 [lib]
 name = "tickit"
