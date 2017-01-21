@@ -18,3 +18,5 @@ ${make} -j2 -C tickit-c
 ${make} -j2 -C tickit-c test
 ${sudo} ${make} -j2 -C tickit-c install
 ${sudo} ${ldconfig}
+
+echo '#[link_args = "'$(pkg-config --libs tickit) $(pkg-config --libs-only-L tickit | sed 's/-L/-Wl,-rpath=/g')'"] extern {}' > src/generated_link.rs
